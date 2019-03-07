@@ -19,19 +19,19 @@ import android.util.TypedValue;
 
 /**
  * A Drawable object that draws text.
- * A TextDrawable accepts most of the same parameters that can be applied to
+ * A FontDrawable accepts most of the same parameters that can be applied to
  * {@link android.widget.TextView} for displaying and formatting text.
- *
+ * <p>
  * Optionally, a {@link Path} may be supplied on which to draw the text.
- *
- * A TextDrawable has an intrinsic size equal to that required to draw all
+ * <p>
+ * A FontDrawable has an intrinsic size equal to that required to draw all
  * the text it has been supplied, when possible.  In cases where a {@link Path}
  * has been supplied, the caller must explicitly call
  * {@link #setBounds(Rect) setBounds()} to provide the Drawable
  * size based on the Path constraints.
  */
 // https://github.com/devunwired/textdrawable/blob/master/sample/src/main/java/com/example/textdrawable/drawable/TextDrawable.java
-public class TextDrawable extends Drawable {
+public class FontDrawable extends Drawable {
 
     /* Platform XML constants for typeface */
     private static final int SANS = 1;
@@ -66,9 +66,12 @@ public class TextDrawable extends Drawable {
             android.R.attr.textColor
     };
 
-
-    public TextDrawable(Context context) {
+    public FontDrawable(Context context, int faIconRes, boolean isSolid, boolean isBrand) {
         super();
+        init(context, faIconRes, isSolid, isBrand);
+    }
+
+    private void init(Context context, int faIconRes, boolean isSolid, boolean isBrand) {
         //Used to load and scale resource items
         mResources = context.getResources();
         //Definition of this drawables size
@@ -93,7 +96,7 @@ public class TextDrawable extends Drawable {
             ap = context.obtainStyledAttributes(appearanceId, appearanceAttributes);
         }
         if (ap != null) {
-            for (int i=0; i < ap.getIndexCount(); i++) {
+            for (int i = 0; i < ap.getIndexCount(); i++) {
                 int attr = ap.getIndex(i);
                 switch (attr) {
                     case 0: //Text Size
@@ -120,26 +123,21 @@ public class TextDrawable extends Drawable {
         setRawTextSize(textSize);
 
         Typeface tf = null;
-        switch (typefaceIndex) {
-            case SANS:
-                tf = Typeface.SANS_SERIF;
-                break;
-
-            case SERIF:
-                tf = Typeface.SERIF;
-                break;
-
-            case MONOSPACE:
-                tf = Typeface.MONOSPACE;
-                break;
+        if (isSolid) {
+            tf = FontCache.get(context, FontCache.FA_FONT_SOLID);
+        } else if (isBrand) {
+            tf = FontCache.get(context, FontCache.FA_FONT_BRANDS);
+        } else {
+            tf = FontCache.get(context, FontCache.FA_FONT_REGULAR);
         }
-
         setTypeface(tf, styleIndex);
+        setText(context.getString(faIconRes));
     }
 
 
     /**
      * Set the text that will be displayed
+     *
      * @param text Text to display
      */
     public void setText(CharSequence text) {
@@ -166,6 +164,7 @@ public class TextDrawable extends Drawable {
 
     /**
      * Set the text size.  The value will be interpreted in "sp" units
+     *
      * @param size Text size value, in sp
      */
     public void setTextSize(float size) {
@@ -174,6 +173,7 @@ public class TextDrawable extends Drawable {
 
     /**
      * Set the text size, using the supplied complex units
+     *
      * @param unit Units for the text size, such as dp or sp
      * @param size Text size value
      */
@@ -203,6 +203,7 @@ public class TextDrawable extends Drawable {
 
     /**
      * Set the horizontal stretch factor of the text
+     *
      * @param size Text scale factor
      */
     public void setTextScaleX(float size) {
@@ -223,11 +224,12 @@ public class TextDrawable extends Drawable {
      * Set the text alignment.  The alignment itself is based on the text layout direction.
      * For LTR text NORMAL is left aligned and OPPOSITE is right aligned.
      * For RTL text, those alignments are reversed.
-     * @param align Text alignment value.  Should be set to one of:
      *
-     *   {@link Layout.Alignment#ALIGN_NORMAL},
-     *   {@link Layout.Alignment#ALIGN_NORMAL},
-     *   {@link Layout.Alignment#ALIGN_OPPOSITE}.
+     * @param align Text alignment value.  Should be set to one of:
+     *              <p>
+     *              {@link Layout.Alignment#ALIGN_NORMAL},
+     *              {@link Layout.Alignment#ALIGN_NORMAL},
+     *              {@link Layout.Alignment#ALIGN_OPPOSITE}.
      */
     public void setTextAlign(Layout.Alignment align) {
         if (mTextAlignment != align) {
@@ -256,7 +258,6 @@ public class TextDrawable extends Drawable {
      * and turns on the fake bold and italic bits in the Paint if the
      * Typeface that you provided does not have all the bits in the
      * style that you specified.
-     *
      */
     public void setTypeface(Typeface tf, int style) {
         if (style > 0) {
@@ -289,6 +290,7 @@ public class TextDrawable extends Drawable {
 
     /**
      * Set a single text color for all states
+     *
      * @param color Color value such as {@link Color#WHITE} or {@link Color#argb(int, int, int, int)}
      */
     public void setTextColor(int color) {
@@ -297,6 +299,7 @@ public class TextDrawable extends Drawable {
 
     /**
      * Set the text color as a state list
+     *
      * @param colorStateList ColorStateList of text colors, such as inflated from an R.color resource
      */
     public void setTextColor(ColorStateList colorStateList) {
@@ -306,10 +309,10 @@ public class TextDrawable extends Drawable {
 
     /**
      * Optional Path object on which to draw the text.  If this is set,
-     * TextDrawable cannot properly measure the bounds this drawable will need.
+     * FontDrawable cannot properly measure the bounds this drawable will need.
      * You must call {@link #setBounds(int, int, int, int) setBounds()} before
-     * applying this TextDrawable to any View.
-     *
+     * applying this FontDrawable to any View.
+     * <p>
      * Calling this method with <code>null</code> will remove any Path currently attached.
      */
     public void setTextPath(Path path) {
@@ -332,8 +335,8 @@ public class TextDrawable extends Drawable {
             mTextBounds.setEmpty();
         } else {
             //Measure text bounds
-            double desired = Math.ceil( Layout.getDesiredWidth(mText, mTextPaint) );
-            mTextLayout = new StaticLayout(mText, mTextPaint, (int)desired,
+            double desired = Math.ceil(Layout.getDesiredWidth(mText, mTextPaint));
+            mTextLayout = new StaticLayout(mText, mTextPaint, (int) desired,
                     mTextAlignment, 1.0f, 0.0f, false);
             mTextBounds.set(0, 0, mTextLayout.getWidth(), mTextLayout.getHeight());
         }
@@ -349,7 +352,7 @@ public class TextDrawable extends Drawable {
         int newColor = mTextColors.getColorForState(stateSet, Color.WHITE);
         if (mTextPaint.getColor() != newColor) {
             mTextPaint.setColor(newColor);
-            return  true;
+            return true;
         }
 
         return false;

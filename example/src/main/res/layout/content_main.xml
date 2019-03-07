@@ -31,10 +31,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:text="@string/fa_amazon"
+        android:text="@string/fa_ad_solid"
         android:textColor="@color/colorAccent"
         android:textSize="30dp"
-        app:branding_icon="true" />
+        app:enable_solid="true"
+        app:branding_icon="false" />
 
     <info.androidhive.fontawesome.FontTextView
         android:layout_width="wrap_content"

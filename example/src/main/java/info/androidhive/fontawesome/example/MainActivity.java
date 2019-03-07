@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import info.androidhive.fontawesome.FontCache;
-import info.androidhive.fontawesome.TextDrawable;
+import info.androidhive.fontawesome.FontDrawable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,11 +30,15 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        /*TextDrawable drawable = new TextDrawable(this);
-        drawable.setText(getString(R.string.app_store));
-        drawable.setTypeface(FontCache.get(this, "fa-brands-400.ttf"));
+        FontDrawable drawable = new FontDrawable(this, R.string.fa_facebook_f, false, true);
         drawable.setTextColor(ContextCompat.getColor(this, android.R.color.white));
-        fab.setImageDrawable(drawable);*/
+        fab.setImageDrawable(drawable);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        FontDrawable drawableUp = new FontDrawable(this, R.string.fa_arrow_left_solid, true, false);
+        drawableUp.setTextColor(ContextCompat.getColor(this, android.R.color.white));
+        toolbar.setNavigationIcon(drawableUp);
+
     }
 
     @Override

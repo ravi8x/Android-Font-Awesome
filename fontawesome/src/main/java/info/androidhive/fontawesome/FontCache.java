@@ -6,6 +6,9 @@ import android.graphics.Typeface;
 import java.util.Hashtable;
 
 public class FontCache {
+    public static final String FA_FONT_REGULAR = "fa-regular-400.ttf";
+    public static final String FA_FONT_SOLID = "fa-solid-900.ttf";
+    public static final String FA_FONT_BRANDS = "fa-brands-400.ttf";
     private static Hashtable<String, Typeface> fontCache = new Hashtable<>();
 
     public static Typeface get(Context context, String name) {
