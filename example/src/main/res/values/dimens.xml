@@ -1,4 +1,6 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="activity_horizontal_margin_half">8dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="icon_size">35dp</dimen>
 </resources>

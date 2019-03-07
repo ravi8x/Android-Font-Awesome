@@ -4,46 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:text="@string/fa_app_store"
-        android:textColor="@color/colorAccent"
-        android:textSize="30dp"
-        app:branding_icon="true" />
+        android:padding="@dimen/activity_margin"
+        android:text="@string/lbl_regular_icons"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:text="@string/fa_facebook"
-        android:textColor="@color/colorAccent"
-        android:textSize="30dp"
-        app:branding_icon="true" />
+    <include
+        layout="@layout/layout_icons_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:text="@string/fa_ad_solid"
-        android:textColor="@color/colorAccent"
-        android:textSize="30dp"
-        app:enable_solid="true"
-        app:branding_icon="false" />
+        android:padding="@dimen/activity_margin"
+        android:text="@string/lbl_solid_icons"
+        android:textColor="#222222"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="wrap_content"
+    <include
+        layout="@layout/layout_icons_solid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:text="@string/fa_apple"
-        android:textColor="@color/colorAccent"
-        android:textSize="30dp"
-        app:branding_icon="true" />
+        android:padding="@dimen/activity_margin"
+        android:text="@string/lbl_brand_icons"
+        android:textColor="#222222"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <include
+        layout="@layout/layout_icons_brands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setImageDrawable(drawable);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        FontDrawable drawableUp = new FontDrawable(this, R.string.fa_arrow_left_solid, true, false);
+        FontDrawable drawableUp = new FontDrawable(this, R.string.fa_angle_double_left_solid, true, false);
         drawableUp.setTextColor(ContextCompat.getColor(this, android.R.color.white));
+        drawableUp.setTextSize(25);
         toolbar.setNavigationIcon(drawableUp);
-
     }
 
     @Override
