@@ -34,5 +34,5 @@ dependencies {
     // implementation(group: 'info.androidhive', name: 'fontawesome', version: '0.0.1', ext: 'aar')
 
     // public repo
-    implementation 'info.androidhive:fontawesome:0.0.1'
+    implementation 'info.androidhive:fontawesome:0.0.2'
 }
