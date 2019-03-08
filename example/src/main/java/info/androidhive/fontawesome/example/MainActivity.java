@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        FontDrawable drawable = new FontDrawable(this, R.string.fa_facebook_f, false, true);
+        FontDrawable drawable = new FontDrawable(this, R.string.fa_paper_plane_solid, true, false);
         drawable.setTextColor(ContextCompat.getColor(this, android.R.color.white));
         fab.setImageDrawable(drawable);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        FontDrawable drawableUp = new FontDrawable(this, R.string.fa_angle_double_left_solid, true, false);
+        FontDrawable drawableUp = new FontDrawable(this, R.string.fa_home_solid, true, false);
         drawableUp.setTextColor(ContextCompat.getColor(this, android.R.color.white));
         drawableUp.setTextSize(25);
         toolbar.setNavigationIcon(drawableUp);

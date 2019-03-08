@@ -14,35 +14,38 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/activity_margin"
         android:text="@string/lbl_regular_icons"
-        android:textSize="16dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/lbl_section"
         android:textStyle="bold" />
 
     <include
         layout="@layout/layout_icons_regular"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/activity_margin"
         android:text="@string/lbl_solid_icons"
-        android:textColor="#222222"
-        android:textSize="16dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/lbl_section"
         android:textStyle="bold" />
 
     <include
         layout="@layout/layout_icons_solid"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/activity_margin"
         android:text="@string/lbl_brand_icons"
-        android:textColor="#222222"
-        android:textSize="16dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/lbl_section"
         android:textStyle="bold" />
 
     <include

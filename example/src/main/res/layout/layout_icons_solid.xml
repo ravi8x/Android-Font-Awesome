@@ -3,72 +3,153 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="6">
+    android:orientation="vertical">
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/fa_app_store"
-        android:textColor="@color/icon_color"
-        android:textSize="@dimen/icon_size"
-        app:branding_icon="true" />
+        android:orientation="horizontal"
+        android:weightSum="6">
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/fa_app_store"
-        android:textColor="@color/icon_color"
-        android:textSize="@dimen/icon_size"
-        app:branding_icon="true" />
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_heart_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/fa_app_store"
-        android:textColor="@color/icon_color"
-        android:textSize="@dimen/icon_size"
-        app:branding_icon="true" />
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_cart_plus_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/fa_app_store"
-        android:textColor="@color/icon_color"
-        android:textSize="@dimen/icon_size"
-        app:branding_icon="true" />
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_edit_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/fa_app_store"
-        android:textColor="@color/icon_color"
-        android:textSize="@dimen/icon_size"
-        app:branding_icon="true" />
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_file_upload_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
 
-    <info.androidhive.fontawesome.FontTextView
-        android:layout_width="0dp"
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_globe_americas_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
+
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_hamburger_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin_half"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/fa_app_store"
-        android:textColor="@color/icon_color"
-        android:textSize="@dimen/icon_size"
-        app:branding_icon="true" />
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_bomb_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
+
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_calendar_check_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
+
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_check_circle"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
+
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_map_marker_alt_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
+
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_phone_square_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
+
+        <info.androidhive.fontawesome.FontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_half"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_restroom_solid"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/icon_size"
+            app:enable_solid="true" />
+
+    </LinearLayout>
 </LinearLayout>
