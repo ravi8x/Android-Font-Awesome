@@ -22,7 +22,6 @@ allprojects {
 
         // enable this to load the artifactory from localhost
         // maven { url "http://localhost:8081/artifactory/androidhive-maven" }
-        
     }
 }
 
