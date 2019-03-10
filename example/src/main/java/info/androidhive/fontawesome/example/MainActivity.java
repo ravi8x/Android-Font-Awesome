@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity
 
         int[] iconsSubmenu = {R.string.fa_cog_solid, R.string.fa_sign_out_alt_solid};
 
+        // rending icons in second section group
         renderMenuIcons(navigationView.getMenu().getItem(7).getSubMenu(), iconsSubmenu, true, false);
     }
 
@@ -145,3 +146,4 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 }
+

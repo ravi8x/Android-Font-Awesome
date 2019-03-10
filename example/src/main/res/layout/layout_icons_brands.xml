@@ -20,7 +20,7 @@
             android:text="@string/fa_apple"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -31,7 +31,7 @@
             android:text="@string/fa_chrome"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -42,7 +42,7 @@
             android:text="@string/fa_facebook"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -53,7 +53,7 @@
             android:text="@string/fa_google_plus"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -64,7 +64,7 @@
             android:text="@string/fa_instagram"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -75,7 +75,7 @@
             android:text="@string/fa_raspberry_pi"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
     </LinearLayout>
 
@@ -94,7 +94,7 @@
             android:text="@string/fa_adobe"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -105,7 +105,7 @@
             android:text="@string/fa_android"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -116,7 +116,7 @@
             android:text="@string/fa_app_store_ios"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -127,7 +127,7 @@
             android:text="@string/fa_cc_paypal"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -138,7 +138,7 @@
             android:text="@string/fa_cc_amex"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
         <info.androidhive.fontawesome.FontTextView
             android:layout_width="0dp"
@@ -149,7 +149,7 @@
             android:text="@string/fa_grunt"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/icon_size"
-            app:branding_icon="true" />
+            app:brand_icon="true" />
 
     </LinearLayout>
 </LinearLayout>

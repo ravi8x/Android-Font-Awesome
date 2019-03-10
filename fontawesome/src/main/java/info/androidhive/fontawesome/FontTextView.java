@@ -20,8 +20,8 @@ public class FontTextView extends AppCompatTextView {
         super(context, attrs, defStyle);
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.FontTextView,
                 0, 0);
-        isSolidIcon = a.getBoolean(R.styleable.FontTextView_enable_solid, false);
-        isBrandingIcon = a.getBoolean(R.styleable.FontTextView_branding_icon, false);
+        isSolidIcon = a.getBoolean(R.styleable.FontTextView_solid_icon, false);
+        isBrandingIcon = a.getBoolean(R.styleable.FontTextView_brand_icon, false);
         init();
     }
 
