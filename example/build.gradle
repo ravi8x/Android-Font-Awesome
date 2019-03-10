@@ -28,11 +28,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     // local module dependency
-    implementation project(':fontawesome')
+    // implementation project(':fontawesome')
 
     // loading from localhost artifactory
     // implementation(group: 'info.androidhive', name: 'fontawesome', version: '0.0.3', ext: 'aar')
 
     // public repo
-    // implementation 'info.androidhive:fontawesome:0.0.4'
+    implementation 'info.androidhive:fontawesome:0.0.5'
 }
