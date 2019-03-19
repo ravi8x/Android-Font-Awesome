@@ -19,6 +19,14 @@ dependencies {
     implementation 'info.androidhive:fontawesome:0.0.5'
 }
 ```
+
+Referring Icon:
+-----
+Font Awesome provides three set of icons **Regular**, **Solid** and **Brand**. All the icons can be referred from `Strings` resource file. For example,
+`@string/fa_map` - Regular map icon
+`@string/fa_heart_solid` - Solid heart icon
+`@string/fa_facebook` - Facebook brand icon.
+
 Displaying Text Icon: FontTextView
 ----
 To display an icon in xml layout, use the **FontTextView** widget. This class is extended from **TextView**, so all the TextView related properties will apply.
@@ -108,3 +116,7 @@ public class MainActivity extends AppCompatActivity
 ```
 
 ![Demo](https://www.androidhive.info/wp-content/uploads/2019/03/android-font-awesome-navigation-drawer.png)
+
+Note:
+-----
+This library includes the **Free** font awesome icons only, premium icons are not available.
