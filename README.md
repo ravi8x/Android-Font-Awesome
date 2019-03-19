@@ -23,8 +23,11 @@ dependencies {
 Referring Icon:
 -----
 Font Awesome provides three set of icons **Regular**, **Solid** and **Brand**. All the icons can be referred from `Strings` resource file. For example,
+
 `@string/fa_map` - Regular map icon
+
 `@string/fa_heart_solid` - Solid heart icon
+
 `@string/fa_facebook` - Facebook brand icon.
 
 Displaying Text Icon: FontTextView
